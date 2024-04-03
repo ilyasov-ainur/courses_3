@@ -15,7 +15,10 @@ class FontsScreen extends StatelessWidget {
         child: ListView(
           children: const [
             Text('Roboto',
-                style: TextStyle(fontFamily: 'Roboto', fontSize: 24)),
+                style: TextStyle(
+                  fontFamily: 'Roboto',
+                  fontSize: 24,
+                )),
             Text('Roboto',
                 style: TextStyle(
                   fontFamily: 'Roboto',
@@ -36,12 +39,14 @@ class FontsScreen extends StatelessWidget {
                 fontSize: 24,
               ),
             ),
-            Text('Onest',
-                style: TextStyle(
-                  fontFamily: 'Onest',
-                  fontSize: 30,
-                  fontWeight: FontWeight.w500,
-                )),
+            Text(
+              'Onest',
+              style: TextStyle(
+                fontFamily: 'Onest',
+                fontSize: 30,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
             Text('Onest',
                 style: TextStyle(
                   fontFamily: 'Onest',

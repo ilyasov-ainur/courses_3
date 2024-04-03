@@ -18,20 +18,26 @@ class ImagesScreen extends StatelessWidget {
           children: [
             Image.asset(
               MyImages.dash,
+              fit: BoxFit.fitHeight,
+              height: 400,
+              width: 400,
+            ),
+            Image.network(
+              _imgUrl,
               height: 200,
             ),
             SvgPicture.asset(
               MySvgImages.surfLogo,
               height: 200,
             ),
-            Image.asset(
-              MyIcons.icWarning,
-              height: 80,
+            SvgPicture.network(
+              'https://pub.dev/static/hash-ub4r9p1a/img/pub-dev-logo.svg',
             ),
-            // TODO: add svg
           ],
         ),
       ),
     );
   }
 }
+
+const _imgUrl = 'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg';

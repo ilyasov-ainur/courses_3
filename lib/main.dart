@@ -14,7 +14,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
+          onPrimary: Colors.white,
+        ),
+        dividerTheme: const DividerThemeData(
+          color: Colors.yellow,
+          thickness: 5,
+        ),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -38,6 +45,9 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             _Button(label: 'Картинки', child: ImagesScreen()),
+            Divider(
+              color: Colors.blue,
+            ),
             _Button(label: 'Шрифты', child: FontsScreen()),
           ],
         ),
@@ -58,8 +68,7 @@ class _Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return FilledButton(
       onPressed: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => child));
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => child));
       },
       child: Text(label),
     );
